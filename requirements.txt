@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+scanpy[leiden]
+squidpy
+spatialdata
+streamlit
+python-dotenv
+google-genai
+notebook
+ipykernel

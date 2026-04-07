@@ -14,6 +14,16 @@ Second, I used a mouse brain spatial transcriptomics dataset to score broad cell
 
 A key part of the project is that the notebook keeps the actual development story. The first pass annotation was not perfect. Gemini review helped identify a biologically implausible cluster assignment, which led to a corrected marker dictionary and a refined annotation workflow.
 
+## Selected results
+
+### scRNA seq UMAP by corrected broad cell type
+![scRNA UMAP by corrected cell type](outputs/scrna_umap_predicted_celltype_v2.png)
+
+### Spatial transcriptomics, dominant broad cell type by spot
+![Spatial dominant cell type](outputs/spatial_scatter_dominant_celltype_v2.png)
+
+### Marker gene heatmap across scRNA seq clusters
+![Marker heatmap](outputs/scrna_rank_genes_groups_heatmap.png)
 ---
 
 ## Why I built this project
