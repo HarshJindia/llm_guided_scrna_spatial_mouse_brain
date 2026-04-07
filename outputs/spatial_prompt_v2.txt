@@ -1,0 +1,14 @@
+The following dominant cell type assignments were observed across spatial transcriptomic spots in a mouse brain sample after corrected rule-based annotation:
+
+dominant_celltype_v2
+Neuron_excitatory    1043
+Oligodendrocyte       425
+Astrocyte             394
+Neuron_inhibitory     324
+Endothelial           183
+Microglia             180
+Ependymal              68
+Pericyte_VSMC          49
+OPC                    36
+
+Please summarize what this suggests about tissue composition, major cell populations, and limitations of spot based spatial transcriptomics.

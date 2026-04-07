@@ -1,0 +1,11 @@
+The predicted cell type, **Neuron_excitatory**, is highly reasonable given the provided marker genes.
+
+**Marker Evidence:**
+The presence of *Neurod6*, a key transcription factor in excitatory neuron development, and *Gria1* and *Gria2*, subunits of the AMPA-type glutamate receptor crucial for fast excitatory synaptic transmission, strongly supports an excitatory glutamatergic neuronal identity. Additional markers like *Hpca*, *Cpne6*, and *Ppp3ca* further confirm a general neuronal identity and function related to calcium signaling.
+
+**Alternative Identities:**
+1.  **Glutamatergic Neuron**: This is essentially synonymous with excitatory neuron in the mammalian brain and is directly supported by the AMPA receptor subunits.
+2.  **Developing or Maturing Excitatory Neuron**: The co-expression of *Neurod6* (developmental transcription factor) and *Gria1/Gria2* (components of mature synapses) suggests a population that could be either developing or functionally mature, or a mix.
+
+**Uncertainty and Limitations:**
+While the evidence for excitatory neurons is strong, the specific subtype (e.g., cortical, hippocampal, specific layer) cannot be precisely determined without more region-specific markers or contextual information. The term "Neuron_excitatory" is broad, and this cluster may represent a more refined subpopulation or a mixture of closely related excitatory neuron types. The dataset only provides top markers, not the full transcriptional profile or expression levels, which limits deeper subtyping.

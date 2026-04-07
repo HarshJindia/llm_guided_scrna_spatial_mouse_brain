@@ -1,0 +1,12 @@
+
+Dataset: Zeisel mouse brain scRNA-seq
+Cluster: 2
+Corrected rule-based predicted cell type: Neuron_excitatory
+Top marker genes: Pcsk2, Arpp21, Snap25, Mef2c, Atp2b2, Tagln3, Calm1, Osbpl1a, Camk2n1, Stx1a
+
+Please do the following:
+1. Evaluate whether the corrected predicted cell type is reasonable.
+2. Suggest 1 to 2 possible alternative identities if relevant.
+3. Explain which markers support the interpretation.
+4. Mention uncertainty and limitations.
+5. Keep the explanation concise and scientifically cautious.

@@ -1,0 +1,38 @@
+
+Dataset: Zeisel mouse brain scRNA-seq
+Number of cells: 3005
+Number of genes: 18913
+
+QC summary statistics:
+       total_counts  n_genes_by_counts  pct_counts_mt
+count   3005.000000        3005.000000    3005.000000
+mean   14953.356073        3776.043261       7.956643
+std     9267.715942        1575.970902       6.063996
+min     2574.000000         785.000000       0.000000
+25%     8130.000000        2484.000000       3.992220
+50%    12913.000000        3656.000000       6.652828
+75%    19284.000000        4927.000000      10.292072
+max    63505.000000        8167.000000      56.983333
+
+QC quantiles:
+      total_counts  n_genes_by_counts  pct_counts_mt
+0.01       3115.08            1069.40       0.133120
+0.05       4156.80            1452.40       0.819797
+0.10       5245.00            1773.20       1.963500
+0.25       8130.00            2484.00       3.992220
+0.50      12913.00            3656.00       6.652828
+0.75      19284.00            4927.00      10.292072
+0.90      27709.20            5936.80      15.313291
+0.95      33697.60            6542.00      19.545692
+0.99      44896.80            7434.84      30.766229
+
+Please suggest conservative QC thresholds for:
+1. minimum genes per cell
+2. maximum genes per cell
+3. maximum mitochondrial percentage
+
+Important context:
+- this is a mouse brain scRNA-seq dataset
+- I want conservative filtering, not aggressive filtering
+- explain the reasoning and uncertainty
+- mention whether the dataset may already be somewhat preprocessed

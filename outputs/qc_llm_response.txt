@@ -1,0 +1,19 @@
+Based on the provided Zeisel mouse brain scRNA-seq dataset statistics, here are conservative QC thresholds with explanations:
+
+**Suggested Conservative QC Thresholds:**
+
+1.  **Minimum genes per cell (`n_genes_by_counts`): 1200**
+    *   **Reasoning:** This threshold aims to remove cells that are likely empty droplets, dead cells, or extremely low-quality captures. A value around 1000-1500 genes is a common starting point. The 1st percentile is 1069 genes and the 5th percentile is 1452 genes. Setting the threshold at 1200 genes allows us to remove the very lowest quality cells (below the 5th percentile) while being conservative and retaining a significant portion of cells that might otherwise be filtered out by a stricter 10th percentile (1773 genes) or higher cutoff. This value sits between the 1st and 5th percentiles.
+    *   **Uncertainty:** While removing clear debris, it's possible some rare cell types naturally express fewer genes. This conservative threshold minimizes the risk of inadvertently filtering out such legitimate cells.
+
+2.  **Maximum genes per cell (`n_genes_by_counts`): 7400**
+    *   **Reasoning:** Cells with excessively high gene counts are often multiplets (multiple cells captured in a single droplet). To conservatively remove these, we look at the upper tail of the distribution. The 99th percentile is 7434 genes. Setting the threshold at 7400 genes means we are only filtering out the top 1% of cells by gene count, which represents the most extreme outliers indicative of multiplet capture. This is a highly conservative approach.
+    *   **Uncertainty:** Some very large or transcriptionally active cell types might naturally exhibit higher gene counts. This conservative threshold aims to retain such cells while still addressing the most probable multiplets.
+
+3.  **Maximum mitochondrial percentage (`pct_counts_mt`): 20%**
+    *   **Reasoning:** A high percentage of mitochondrial reads often indicates cellular stress, damage, or apoptosis, where cytoplasmic mRNA has degraded, enriching for more stable mitochondrial transcripts. Typical stringent thresholds are 5-10%, but for a conservative approach, a higher threshold is used. The 95th percentile is 19.54%. Setting the threshold at 20% allows us to filter out only the top 5% of cells with the highest mitochondrial content, thus retaining potentially viable cells that might have slightly elevated mitochondrial percentages due to biological variation or processing stress, while removing the most clearly compromised cells.
+    *   **Uncertainty:** Mitochondrial percentage can vary across different cell types and physiological states, particularly in the brain where neuronal health can impact mitochondrial activity. A 20% threshold is generous and aims to avoid discarding potentially valuable biological signal from certain cell populations that might naturally have slightly higher mitochondrial counts.
+
+**Likely Preprocessing Status:**
+
+The dataset shows a minimum of 2574 `total_counts` and 785 `n_genes_by_counts`. The `min` `pct_counts_mt` is 0%. These values suggest that the dataset may have already undergone some basic preliminary quality control. It is rare for raw scRNA-seq data to have a minimum total count as high as 2574; typically, raw data would include many empty droplets or extremely low-count debris with total counts often in the tens or hundreds. The presence of a 0% mitochondrial count might indicate that cells without any detected mitochondrial reads (perhaps due to very low total counts or specific detection algorithms) have not been fully filtered out, or it might just reflect the rare instance of a cell with no mitochondrial reads quantified. While not definitive, the relatively high minimum counts hint at some level of initial processing or selection having occurred before these summary statistics were generated.
